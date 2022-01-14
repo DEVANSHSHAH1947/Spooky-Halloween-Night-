@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPOOKY NIGHT HALLOWEEN SPECIAL  || CSS </title>
+</head>
+<style>
+  @import url("http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
+  
+*{
+    margin: 0;
+    padding: 0;
+}
+.artboard{
+    width: 600px;
+    height: 600px;
+    background: rgb(2, 15, 39);   
+    box-shadow: 0px 3px 20px rgba(0,0,0,0.2);
+    border-radius: 50%; 
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border:10px rgb(248, 248, 248) solid;
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+}
+body 
+{
+    background-color: #000000;
+    overflow:hidden;
+}
+div 
+{
+    position: absolute;
+}
+.road
+{
+    height:300px;
+    width:4400px;
+    background-color: rgba(0, 0, 0, 0.5);
+    top:510px;
+    left:60px;
+}
+
+.moon{
+    height: 400px;
+    width:400px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: rgb(216, 166, 40);
+    z-index: 2;
+    top:80px;
+    left:100px;
+}
+.moon1{
+    height: 140px;
+    width:140px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: rgba(104, 100, 91, 0.246);
+    z-index: 2;
+    top:120px;
+    left:300px;
+}
+.moon2{
+    height: 70px;
+    width:70px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: rgba(104, 100, 91, 0.5);
+    z-index: 2;
+    top:260px;
+    left:120px;
+}
+.cloud-container 
+{
+  opacity: 1; 
+  z-index: 2;   
+}
+
+.cloud,
+.cloud:before,
+.cloud:after 
+{  
+  border-radius: 35px;
+  background: white;
+}
+.cloud 
+{
+  display: flex;
+  vertical-align: top;
+  width: 100px;
+  height: 50px;
+  border-radius: 50px 35px 35px 15px;
+  position: absolute;
+  background-color: white;
+}
+.cloud:before,
+.cloud:after 
+{
+  content:'';
+  position: absolute;
+  background-color: white;
+}
+.cloud:before 
+{  
+  width: 50px;
+  height: 60px;
+  left: 12px;
+  bottom: 0;
+  background-color: white;
+}
+.cloud:after {
+  width: 40px;
+  height: 60px;
+  right: 20px;
+  bottom: 0;
+  background-color: white;
+
+}
+.cloud:nth-child(0){
+  position: absolute;
+  top: 200px;
+  left: 250px;
+  background-color: white;
+
+}
+.cloud:nth-child(1){
+  position: absolute;
+  top: 200px;
+  left: 250px;
+  background-color: white;
+}
+.cloud:nth-child(2){
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  background-color: white;
+}
+.cloud:nth-child(3)
+{
+  position: absolute;
+  top: 200px;
+  left: -50px;
+  background-color: white;
+}
+.cloud:nth-child(4)
+{
+  position: absolute;
+  top: 20px;
+  left: 200px;
+  background-color: white;
+}
+.cloud:nth-child(5)
+{
+  position: absolute;
+  top: 100px;
+  left: -350px;
+  background-color: white;
+}
+.cloud:nth-child(6)
+{
+  position: absolute;
+  top: 20px;
+  left: -200px;
+  background-color: white;
+}
+.cloud:nth-child(7)
+{
+  position: absolute;
+  top: 200px;
+  left: -300px;
+  background-color: white;
+}
+.cloud:nth-child(8)
+{
+  position: absolute;
+  top: 100px;
+  left: -100px;
+  background-color:white;
+}
+.cloud 
+{
+    animation: cloudmove 20s linear infinite ;
+}
+@keyframes cloudmove 
+{
+  0% { transform: translateX(-450px); }
+  100% { transform: translateX(1090px); }
+}
+.smoke {
+    position: absolute;
+    z-index: 100;
+    width: 110px;
+    height: 170px;
+    pointer-events: none;
+}
+.smoke span 
+{
+    position: absolute;
+    top: 309px;
+    left: 327px;
+    height: 0px;
+    width: 0px;
+    border: 35px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0.2);
+}
+
+/* Smoke animation */
+
+@-webkit-keyframes smokeL {
+    0% {
+        -webkit-transform: scale(0.2) translate(0, 0);
+        transform: scale(0.2) translate(0, 0);
+    }
+    10% {
+        opacity: 1;
+        -webkit-transform: scale(0.2) translate(0, -5px);
+        transform: scale(0.2) translate(0, -5px);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(1) translate(-20px, -130px);
+        transform: scale(1) translate(-20px, -130px);
+    }
+}
+
+@keyframes smokeL {
+    0% {
+        -webkit-transform: scale(0.2) translate(0, 0);
+        transform: scale(0.2) translate(0, 0);
+    }
+    10% {
+        opacity: 1;
+        -webkit-transform: scale(0.2) translate(0, -5px);
+        transform: scale(0.2) translate(0, -5px);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(1) translate(-20px, -130px);
+        transform: scale(1) translate(-20px, -130px);
+    }
+}
+
+@-webkit-keyframes smokeR {
+    0% {
+        -webkit-transform: scale(0.2) translate(0, 0);
+        transform: scale(0.2) translate(0, 0);
+    }
+    10% {
+        opacity: 1;
+        -webkit-transform: scale(0.2) translate(0, -5px);
+        transform: scale(0.2) translate(0, -5px);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(1) translate(20px, -130px);
+        transform: scale(1) translate(20px, -130px);
+    }
+}
+
+@keyframes smokeR {
+    0% {
+        -webkit-transform: scale(0.2) translate(0, 0);
+        transform: scale(0.2) translate(0, 0);
+    }
+    10% {
+        opacity: 1;
+        -webkit-transform: scale(0.2) translate(0, -5px);
+        transform: scale(0.2) translate(0, -5px);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(1) translate(20px, -130px);
+        transform: scale(1) translate(20px, -130px);
+    }
+}
+
+.smoke .s0 {
+    -webkit-animation: smokeL 10s 0s infinite;
+    animation: smokeL 10s 0s infinite;
+}
+
+.smoke .s1 {
+    -webkit-animation: smokeR 10s 1s infinite;
+    animation: smokeR 10s 1s infinite;
+}
+
+.smoke .s2 {
+    -webkit-animation: smokeL 10s 2s infinite;
+    animation: smokeL 10s 2s infinite;
+}
+
+.smoke .s3 {
+    -webkit-animation: smokeR 10s 3s infinite;
+    animation: smokeR 10s 3s infinite;
+}
+
+.smoke .s4 {
+    -webkit-animation: smokeL 10s 4s infinite;
+    animation: smokeL 10s 4s infinite;
+}
+
+.smoke .s5 {
+    -webkit-animation: smokeR 10s 5s infinite;
+    animation: smokeR 10s 5s infinite;
+}
+
+.smoke .s6 {
+    -webkit-animation: smokeL 10s 6s infinite;
+    animation: smokeL 10s 6s infinite;
+}
+
+.smoke .s7 {
+    -webkit-animation: smokeR 10s 7s infinite;
+    animation: smokeR 10s 7s infinite;
+}
+
+.smoke .s8 {
+    -webkit-animation: smokeL 10s 8s infinite;
+    animation: smokeL 10s 8s infinite;
+}
+
+.smoke .s9 {
+    -webkit-animation: smokeR 10s 9s infinite;
+    animation: smokeR 10s 9s infinite;
+}
+.smoke .s10 {
+    -webkit-animation: smokeL 10s 9s infinite;
+    animation: smokeR 10s 9s infinite;
+}
+.smoke .s11 {
+    -webkit-animation: smokeR 10s 9s infinite;
+    animation: smokeR 10s 9s infinite;
+}
+
+.smoke .s12 {
+    -webkit-animation: smokeL 10s 9s infinite;
+    animation: smokeR 10s 9s infinite;
+}
+
+.smoke .s13 {
+    -webkit-animation: smokeR 10s 9s infinite;
+    animation: smokeR 10s 9s infinite;
+}
+
+.smoke .s14 {
+    -webkit-animation: smokeL 10s 9s infinite;
+    animation: smokeR 10s 9s infinite;
+}
+
+.smoke .s15 {
+    -webkit-animation: smokeR 10s 9s infinite;
+    animation: smokeR 10s 9s infinite;
+}
+.stars {
+  width: 100%;
+  z-index: 100;
+}
+
+.star {
+  display: inline-block;
+  position: relative;  
+  animation: twinkle 7s -1s infinite;
+}
+
+.star:nth-child(even){
+  animation: twinkle 7s 2s infinite;
+}
+
+@keyframes twinkle {
+  0% { opacity: 1; }
+  60% { opacity: 0.2; }
+}
+
+.star:before,
+.star:after{
+  content: '';
+  display: block;
+  width: 4px;
+  height: 15px;
+  background: #ffffff;
+  border-radius: 45%;  
+}
+
+.star:before {  
+  transform: rotate(-45deg);
+  position: absolute;
+  
+}
+
+.star:after {  
+  transform: rotate(45deg);
+}
+
+.star:nth-child(1){
+  transform: translate(100px,15px);
+  
+  top:0px;
+  left:250px;
+}
+
+.star:nth-child(2){
+  transform: translate(200px,55px);
+  
+  top:0px;
+  left:-30px;
+}
+
+.star:nth-child(3){
+  transform: translate(300px,15px);
+ 
+  top:100px;
+  left:-250px;
+}
+
+.star:nth-child(4){
+  transform: translate(400px,15px);
+  
+  top:40px;
+  left:0px;
+  
+}
+
+.star:nth-child(5){
+  transform: translate(300px,15px);
+  top:-60px;
+  left:200px;
+  
+}
+.star:nth-child(6){
+  transform: translate(300px,15px);
+  top:0px;
+  left:-100px;
+ 
+}
+.star:nth-child(7){
+  transform: translate(300px,15px);
+  top:130px;
+  left:50px;
+
+}
+.star:nth-child(8){
+  transform: translate(300px,15px);
+  top:100px;
+  left:160px;
+ 
+
+}
+.ground_floor{
+  height:100px;
+  width:220px;
+  background-color: rgb(11, 52, 65);
+  z-index: 2;
+  top:410px;
+  left:190px;
+  border-radius:0px;
+  /*
+  clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
+  transform: rotate(180deg);*/
+}
+.roof{
+  height:60px;
+  width:250px;
+  background-color: rgb(64, 89, 114);
+  z-index: 3;
+  top:379px;
+  left:175px;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+  border-bottom-left-radius:0px;
+
+}
+
+.roof2{
+  height:50px;
+  width:60px;
+  background-color: rgb(3, 40, 49);
+  z-index: 3;
+  top:383px;
+  left:270px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.topWindow{
+  height:28px;
+  width:28px;
+  background-color: yellow;
+  top:399px;
+  border-radius: 50%;
+  left:285px;
+  z-index: 3;
+  animation: blink 2s ease-in-out infinite;
+}
+@keyframes blink {
+  0% {
+    background-color:rgb(238, 255, 0);
+  }
+  50%{
+    background-color: rgba(255, 251, 0, 0.555);
+  }
+  100%{
+    background-color:rgb(238, 255, 0);
+  }
+  
+}
+
+.top_window_line1{
+  height:30px;
+  width:3px;
+  background-color: rgb(11, 52, 65);
+  left:298px;
+  top:399px;
+  z-index: 3;
+
+}
+.top_window_line2{
+  height:30px;
+  width:3px;
+  background-color: rgb(11, 52, 65);
+  left:298px;
+  top:399px;
+  z-index: 3;
+  transform: rotate(90deg);
+
+}
+
+.door_top{
+  height:50px;
+  width:30px;
+  background-color: rgb(251, 255, 0);
+  left:285px;
+  top:455px;
+  z-index: 2;
+  border-radius:62px 62px 0 0;
+  animation: blink 2s ease-in-out infinite;
+  box-shadow: inset 0px 0px 20px #000000,0 0 30px -4px rgb(0, 0, 0);
+ 
+}
+.welcome{
+  height:5px;
+  width:40px;
+  background-color: black;
+  left:280px;
+  z-index: 3;
+  top:505px;
+}
+.window{
+  height:30px;
+  width:30px;
+  background-color: yellow;
+  top:459px;
+  left:220px;
+  z-index: 3;
+  animation: blink 2s ease-in-out infinite;
+}
+.window2{
+  height:30px;
+  width:30px;
+  background-color: yellow;
+  top:459px;
+  left:350px;
+  z-index: 3;
+  animation: blink 2s ease-in-out infinite;
+}
+.window_line1{
+  height:30px;
+  width:5px;
+ background-color: rgb(11, 52, 65);
+  left:233px;
+  top:459px;
+  z-index: 3;
+
+}
+.window_line2{
+  height:32px;
+  width:5px;
+  background-color: rgb(11, 52, 65);
+  left:232px;
+  top:458px;
+  z-index: 3;
+  transform: rotate(90deg);
+
+}
+.window_line3{
+  height:30px;
+  width:5px;
+  background-color: rgb(11, 52, 65);
+  left:363px;
+  top:459px;
+  z-index: 3;
+
+}
+.window_line4{
+  height:32px;
+  width:5px;
+  background-color: rgb(11, 52, 65);
+  left:362px;
+  top:459px;
+  z-index: 3;
+  transform: rotate(90deg);
+
+}
+.chimney_bottom{
+  height:40px;
+  width:27px;
+  background-color: rgb(200, 88, 13);
+  top:350px;
+  left:350px;
+  z-index: 3;
+ 
+}
+.chimney_top{
+  height:10px;
+  width:35px;
+  background-color: rgb(0, 0, 0);
+  top:350px;
+  left:346px;
+  z-index: 3;
+ 
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.pumpkin{
+  height:50px;
+  width:70px;
+  background-color: #f68632;
+  position: absolute;
+  z-index: 9;
+  top:455px;
+  left:420px;
+  border:4px solid #a14907;
+  border-radius: 70%/110%;
+  box-shadow: inset 0px 0px 20px #a14907,0 0 30px -4px red;
+  animation:float 3s infinite;
+}
+ .texture{
+  height:40px;
+  width:30px;
+  position: absolute;
+  bottom:0px;
+  left:20px;
+  border-radius: 70%/130%;
+  border-bottom:5px solid #a14907;
+  z-index: 10;
+  border-top:5px solid #a14907;
+}
+.root{
+  background-color: #14d120;
+  height:25px;
+  width:10px;
+  position: absolute;
+  bottom:50px;
+  left:30px;
+  transform: rotate(4deg);
+  border-radius:30% 30% 30% 30% ;
+  box-shadow:  0 0 10px #14d120;
+
+}
+.eye{
+  position:absolute;
+  width:0;
+  height:0;
+  border-top: 8px solid transparent;
+  top:0px;
+  left:10px;
+
+}
+.eye.right{
+left:45px;
+border-left: 10px solid #401b03;
+border-bottom:10px solid transparent ;
+transform: rotate(43deg);
+z-index: 20;
+bottom:0px;
+top:11px;
+}
+.eye.left{
+left:15px;
+border-left: 10px solid #401b03;
+border-bottom:10px solid transparent ;
+transform: rotate(140deg);
+z-index: 20;
+top:10px;
+}
+.mouth{
+  border-bottom: 10px solid #401b03;
+  position: absolute;
+  width:30px;
+  height:2px;
+  bottom:3px;
+  left:20px;
+  border-radius:100px 100px 0px 0;
+  z-index: 30;
+  transform: rotate(180deg);
+
+}
+.mouth:hover{
+  background-color: #fafafaa2;
+  transform: rotate(0deg);
+  cursor: pointer;
+}
+@keyframes float {
+  0%, 100%{
+    transform:translateY(0)
+  }
+  50%{
+    transform: translateY(-30px);
+  }
+}
+.wish{
+  width:250px;
+  height:30px;
+  color:red;
+  border: white;
+  z-index:200;
+  
+  position:absolute;
+  top:530px;
+  left:200px;
+  font-family:cursive;
+  font-size:20px;
+  overflow: hidden;
+}
+.ghost
+{
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 70px 70px 0 0;
+  position: absolute;
+  cursor: pointer;
+  animation: floating 3s infinite ease-in-out;
+  z-index: 300;
+  top:440px;
+  left:120px;
+  z-index: 300;
+}
+@keyframes floating{
+  50%{
+    transform: translateY(-30px);
+  }
+}
+.face1
+{
+  width: 100px;
+  position: absolute;
+  top: 60px;
+  left: calc(50% - 50px);
+}
+
+.eyel{
+  height: 10px;
+  width: 10px;
+  background-color: rgb(11, 52, 65);
+  position:absolute;
+  top:-40px;
+  left:35px;
+  border-radius:50%;
+
+}
+.eyer{
+  height: 10px;
+  width: 10px;
+  background-color: rgb(11, 52, 65);
+  position:absolute;
+  top:-40px;
+  left:53px;
+  border-radius:50%;
+
+}
+
+.eyel:hover  
+{
+ background-color: rgb(255, 0, 0);
+}
+.eyer:hover  
+{
+ background-color:rgb(255, 0, 0);
+}
+.mouth1
+{
+  width: 30px;
+  height: 15px;
+  background-color: rgb(11, 52, 65);
+  margin: auto;
+  border-radius: 0 0 20px 20px;
+  transition: .3s linear;
+  position:absolute;
+  top:-20px;
+  left:35px;
+  z-index: 300;
+}
+
+.mouth1:hover 
+{
+  transform: rotate(180deg) translateY(3px);
+  background: red;
+}
+
+.hands
+{
+  width: 180px;
+  position: absolute;
+  left: -20px;
+  top: 80px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 20;
+}
+
+.hands span
+{
+  width: 30px;
+  height: 20px;
+  background-color: #ffffff;
+  z-index: 20;
+}
+
+.hands span:first-child
+{
+  border-radius: 20px 0 0 20px;
+  position:absolute;
+  left:2px;
+  top: -50px;
+  z-index:20;
+  transform: rotate(30deg);
+}
+
+.hands span:last-child
+{
+  border-radius: 0 20px 20px 0;
+  position:absolute;
+  left:57px;
+  top: -50px;
+  z-index:20;
+  transform: rotate(-30deg);
+}
+
+.feet
+{
+  position: absolute;
+  width: 100%;
+  bottom: -20px;
+  display: flex;
+}
+
+.feet span
+{
+  flex: 1;
+  height: 20px;
+  background-color: #f2f2f2;
+  border-radius: 0 0 20px 20px;
+}
+
+.feet span:first-child
+{
+  border-radius: 0 0 20px 12px;
+}
+
+.feet span:last-child
+{
+  border-radius: 0 0 12px 20px;
+}
+
+</style>
+<body>
+<div class="artboard">
+                <div class="road"></div>
+                <div class="moon"></div>
+                <div class="moon1"></div>
+                <div class="moon2"></div>
+                <div class="ground_floor"></div>
+                <div class="roof"></div>
+                <div class="floor1"></div>
+                <div class="roof2"></div>
+                <div class="topWindow"></div>
+                <div class="top_window_line1"></div>
+                <div class="top_window_line2"></div>
+                <div class="door_bottom"></div>
+                <div class="door_top"></div>
+                <div class="welcome"></div>
+                <div class="window"></div>
+                <div class="window2"></div>
+                <div class="window_line1"></div>
+                <div class="window_line2"></div>
+                <div class="window_line3"></div>
+                <div class="window_line4"></div>
+                <div class="chimney_bottom"></div>
+                <div class="chimney_top"></div>
+    
+                         <div class="stars">
+                                     <div class="star"></div> 
+                                     <div class="star"></div> 
+                                     <div class="star"></div> 
+                                     <div class="star"></div> 
+                                     <div class="star"></div> 
+                                     <div class="star"></div> 
+                                     <div class="star"></div>
+                                     <div class="star"></div>
+                         </div>
+      
+                        <div class="cloud-container">
+                                     <div class="cloud"></div>
+                                     <div class="cloud"></div>
+                                     <div class="cloud"></div>
+                                     <div class="cloud"></div>
+                                     <div class="cloud"></div>    
+                                     <div class="cloud"></div> 
+                                     <div class="cloud"></div> 
+                                     <div class="cloud"></div>  
+                                     <div class="cloud"></div> 
+                        </div>
+      
+                             <div class="smoke">
+                                       <span class="s0"></span>
+                                       <span class="s1"></span>
+                                       <span class="s2"></span>
+                                       <span class="s3"></span>
+                                       <span class="s4"></span>
+                                       <span class="s5"></span>
+                                       <span class="s6"></span>
+                                       <span class="s7"></span>
+                                       <span class="s8"></span>
+                                       <span class="s9"></span>
+                                      <span class="s10"></span>
+                                      <span class="s11"></span>
+                                      <span class="s12"></span>
+                                      <span class="s13"></span>
+                                      <span class="s14"></span>
+                                      <span class="s15"></span>
+                               </div>
+
+      <div class="container">
+                            <div class="pumpkin">
+                                  <div class="texture"></div>
+                                  <div class="root"></div>
+                                  <div class="eye left"></div>
+                                  <div class="eye right"></div>
+                                  <div class="mouth"></div>
+                                  <div class="teeth"></div>
+                            </div>
+                             <div class="shadow"></div>
+       </div>
+
+       <div class="ghost">
+        <div class="face1">
+        <div class="eyel"></div>
+        <div class="eyer"></div>
+          <div class="mouth1"></div>
+        </div>
+        
+        <div class="hands">
+          <span></span><span></span>
+        </div>
+        
+        <div class="feet">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+       </div>
+       
+       <div class="wish">
+         &hearts;HAPPY HALLOWEEN&hearts;
+       </div>
+   </div> 
+
+<script>
+  alert("!! HAPPY HALLOWEEN FROM DEVANSH !!")
+</script>
+ 
+  </body>
+</html>
